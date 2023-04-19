@@ -55,3 +55,46 @@ class Spaceship {
 var ship = Spaceship()
 ship.cruise()
 ship.thrust()
+
+
+let animals = ["dog", "cat", "buffalo","monkey", "elephant", "tiger"]
+
+for animal in animals where animal.starts(with: "m") {
+    print(animal)
+}
+
+print()
+for i in 0...20 where i%4==0{
+    print("i :\(i)")
+}
+
+print()
+for j in 0..<20 where j%4==0{
+    print("j :\(j)")
+}
+
+enum Phone {
+    case iPhone11pro
+    case iPhoneSE
+    case iPhone12
+    case iPhone12Pro
+    case pixel
+    case nokia
+    case samsung
+}
+
+func getReviewForPhone(on phone: Phone) {
+    print("\nThis is review about \(phone)")
+}
+
+getReviewForPhone(on: .iPhone11pro)
+
+extension String {
+    func removeWhiteSpace() -> String {
+        return components(separatedBy: .whitespaces).joined(separator: "'")
+    }
+}
+
+let sampleString = "Hey I'm looking for the extension function in swift"
+print()
+print(sampleString.removeWhiteSpace())
